@@ -1,0 +1,170 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a1afb4;
+    color: #333333;
+}
+
+
+
+.header {
+    background-color: #263238;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+.header-content h1 {
+    margin: 15px 0 5px 0;
+    font-size: 32px;
+}
+
+.header-content p {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+
+.navigation {
+    background-color: #37474f;
+    text-align: center;
+    padding: 15px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+
+.cv-section {
+    background-color: white;
+    width: 80%;
+    margin: 25px auto;
+    padding: 25px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+
+
+
+.cv-section h2 {
+    color: #263238;
+    border-bottom: 2px solid #263238;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.cv-section p {
+    line-height: 1.6;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #eeeeee;
+}
+
+
+
+.project {
+    border-left: 4px solid #37474f;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #263238;
+}
+
+.project p {
+    margin-bottom: 8px;
+}
+
+
+
+.skills-list {
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+
+
+a {
+    color: #1565c0;
+}
+
+a:hover {
+    color: #0d47a1;
+}
+
+
+
+.footer {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .cv-section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .navigation a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .header-content h1 {
+        font-size: 26px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+}
