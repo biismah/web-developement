@@ -407,3 +407,144 @@ img {
     }
 
 }
+
+
+/* =================================
+   TASK 2 - PRODUCT PAGE CSS GRID
+================================= */
+
+/* Product page spacing */
+.product-page {
+    padding: 40px 0;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.breadcrumbs a {
+    color: #5b768d;
+    text-decoration: none;
+}
+
+
+/* Mobile layout - below 628px */
+.product-layout {
+    display: grid;
+
+    grid-template-areas:
+        "image"
+        "details"
+        "description";
+
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Assigning grid areas */
+
+.detail-image {
+    grid-area: image;
+}
+
+.product-details {
+    grid-area: details;
+}
+
+.product-description {
+    grid-area: description;
+}
+
+
+/* Product image */
+.detail-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Product details */
+.product-details {
+    background-color: #f7f7f7;
+    padding: 25px;
+}
+
+.product-details h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.product-details .price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* Quantity */
+.quantity {
+    margin: 20px 0;
+}
+
+.quantity input {
+    width: 65px;
+    padding: 8px;
+    margin-left: 10px;
+}
+
+
+/* Add to bag button */
+.add-to-cart {
+    width: 100%;
+    padding: 14px;
+    background-color: #263238;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #5b768d;
+}
+
+
+/* Product description */
+.product-description {
+    line-height: 1.8;
+}
+
+.product-description h2 {
+    margin-bottom: 20px;
+}
+
+.product-description h3 {
+    margin-top: 25px;
+}
+
+
+/* Desktop and tablet layout - 628px and wider */
+@media (min-width: 628px) {
+
+    .product-layout {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "image details"
+            "description description";
+
+        gap: 35px;
+        align-items: start;
+    }
+
+    /* Sticky product details */
+    .product-details {
+        position: sticky;
+        top: 98px;
+        align-self: start;
+    }
+
+}
+
