@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,44 +9,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
+    <!-- Announcement bar -->
     <div class="announcement">
         FREE SHIPPING ON ORDERS OVER PKR 3,000
     </div>
 
+    <!-- Header -->
     <header>
 
         <div class="logo-bar">
             <a class="brand" href="index.html">SUMMER DAISIES</a>
         </div>
 
-        
         <nav class="navbar navbar-expand-md">
             <div class="container-fluid">
 
-            
-<button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse" data-bs-target="#mainNavigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNavigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            
                 <a class="nav-link order-md-last" href="#" aria-label="Shopping cart">
                     <i class="bi bi-bag"></i> 0
                 </a>
 
-            
                 <div class="collapse navbar-collapse" id="mainNavigation">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#products">Products</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -56,94 +61,139 @@
 
     <main>
 
-    
+        <!-- Hero section -->
         <section class="hero">
             <h1>Limited-Edition Sets</h1>
             <h2>Discover our new skincare and fragrance bundle</h2>
             <a href="#about" class="hero-button">LEARN MORE</a>
         </section>
 
-        <!-- About -->
+        <!-- About section -->
         <section class="about container" id="about">
             <p class="small-title">ESSENTIAL BEAUTY FOR EVERYDAY</p>
             <h2>Beauty you look forward to.</h2>
             <p>Simple skincare and little self-care rituals to brighten your day.</p>
         </section>
 
-        <!-- Products -->
+        <!-- Products section -->
         <section class="products" id="products">
+
             <div class="container">
+
                 <h2>Discover Our Community Favorites</h2>
 
-            
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+                <!-- Task 1: Category Filters -->
 
-                    <div class="col">
+                <input type="radio" name="category" id="filter-all" checked>
+                <label for="filter-all">All</label>
+
+                <input type="radio" name="category" id="filter-lip-care">
+                <label for="filter-lip-care">Lip Care</label>
+
+                <input type="radio" name="category" id="filter-skincare">
+                <label for="filter-skincare">Skincare</label>
+
+                <input type="radio" name="category" id="filter-body-care">
+                <label for="filter-body-care">Body Care</label>
+
+                <input type="radio" name="category" id="filter-sets">
+                <label for="filter-sets">Sets</label>
+
+
+                <!-- Product Grid -->
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3" id="productGrid">
+
+                    <!-- Product 1 -->
+                    <div class="col" data-category="lip-care">
                         <div class="product-card">
-                            <a href="product.html"><img src="lipcream.jpg" alt="Lip Butter Balm"></a>
+                            <a href="product.html">
+                                <img src="lipcream.jpg" alt="Lip Butter Balm">
+                            </a>
                             <h3>Lip Butter Balm</h3>
                             <p>PKR 4,500</p>
                             <button type="button">ADD TO CART</button>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- Product 2 -->
+                    <div class="col" data-category="lip-care">
                         <div class="product-card">
-                            <a href="product.html"><img src="minilip.jpg" alt="Lip Butter Balm Minis"></a>
+                            <a href="product.html">
+                                <img src="minilip.jpg" alt="Lip Butter Balm Minis">
+                            </a>
                             <h3>Lip Butter Balm Minis</h3>
                             <p>PKR 6,000</p>
                             <button type="button">ADD TO CART</button>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- Product 3 -->
+                    <div class="col" data-category="sets">
                         <div class="product-card">
-                            <a href="product.html"><img src="jetlag.jpg" alt="The Jet Lag Essential Kit"></a>
+                            <a href="product.html">
+                                <img src="jetlag.jpg" alt="The Jet Lag Essential Kit">
+                            </a>
                             <h3>The Jet Lag Essential Kit</h3>
                             <p>PKR 9,000</p>
                             <button type="button">ADD TO CART</button>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- Product 4 -->
+                    <div class="col" data-category="lip-care">
                         <div class="product-card">
-                            <a href="product.html"><img src="lipoil.jpg" alt="Petal Lip Oil"></a>
+                            <a href="product.html">
+                                <img src="lipoil.jpg" alt="Petal Lip Oil">
+                            </a>
                             <h3>Petal Lip Oil</h3>
                             <p>PKR 2,500</p>
                             <button type="button">ADD TO CART</button>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- Product 5 -->
+                    <div class="col" data-category="body-care">
                         <div class="product-card">
-                            <a href="product.html"><img src="cream.jpg" alt="Soft Sunday Lotion"></a>
+                            <a href="product.html">
+                                <img src="cream.jpg" alt="Soft Sunday Lotion">
+                            </a>
                             <h3>Soft Sunday Lotion</h3>
                             <p>PKR 5,500</p>
                             <button type="button">ADD TO CART</button>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- Product 6 -->
+                    <div class="col" data-category="lip-care">
                         <div class="product-card">
-                            <a href="product.html"><img src="lipstain.jpg" alt="Lip Stain"></a>
+                            <a href="product.html">
+                                <img src="lipstain.jpg" alt="Lip Stain">
+                            </a>
                             <h3>Lip Stain</h3>
                             <p>PKR 2,000</p>
                             <button type="button">ADD TO CART</button>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- Product 7 -->
+                    <div class="col" data-category="skincare">
                         <div class="product-card">
-                            <a href="product.html"><img src="hydrating.jpg" alt="Hydrating Moisturizer"></a>
+                            <a href="product.html">
+                                <img src="hydrating.jpg" alt="Hydrating Moisturizer">
+                            </a>
                             <h3>Hydrating Moisturizer</h3>
                             <p>PKR 3,500</p>
                             <button type="button">ADD TO CART</button>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- Product 8 -->
+                    <div class="col" data-category="sets">
                         <div class="product-card">
-                            <a href="product.html"><img src="essenlip.jpg" alt="Essential Lip Kit"></a>
+                            <a href="product.html">
+                                <img src="essenlip.jpg" alt="Essential Lip Kit">
+                            </a>
                             <h3>Essential Lip Kit</h3>
                             <p>PKR 6,500</p>
                             <button type="button">ADD TO CART</button>
@@ -156,7 +206,9 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
+
         <div class="container">
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
@@ -189,16 +241,15 @@
 
             </div>
 
-        
             <div class="footer-bottom">
                 <span>&copy; 2026 Summer Daisies</span>
-
             </div>
 
         </div>
+
     </footer>
 
-    <!-- Bootstrap JS: only for the mobile hamburger menu -->
+    <!-- Bootstrap JS for mobile hamburger menu -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

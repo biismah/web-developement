@@ -1,4 +1,6 @@
 
+/* 1. General CSS */
+
 * {
     box-sizing: border-box;
 }
@@ -19,7 +21,9 @@ img {
     height: auto;
 }
 
+
 /* 2. Announcement bar */
+
 .announcement {
     background: #5b768d;
     color: #ffffff;
@@ -29,8 +33,8 @@ img {
 }
 
 
+/* 3. Header */
 
-/* 3. Header: logo in the centre, Bootstrap navbar below it */
 .logo-bar {
     text-align: center;
     padding: 6px 0;
@@ -40,17 +44,19 @@ img {
     font-size: 20px;
     font-weight: bold;
 }
+
 .navbar {
     padding-top: 0px !important;
     padding-bottom: 12px !important;
 }
 
-
 .nav-link:hover {
     color: #b77b78;
 }
 
-/* 4. Hero: Flexbox centres the text over the background image */
+
+/* 4. Hero section */
+
 .hero {
     background-image: url("hero.jpg");
     background-size: cover;
@@ -72,16 +78,16 @@ img {
     margin-bottom: 0px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    
 }
-.hero h2{
+
+.hero h2 {
     font-size: 20px;
     margin-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
-
 }
+
 .hero-button {
-    padding:  15px 20px;
+    padding: 15px 20px;
     background: white;
     color: #222;
     font-size: 12px;
@@ -91,7 +97,9 @@ img {
     background: #f3d9d0;
 }
 
+
 /* 5. About section */
+
 .about {
     text-align: center;
     padding: 40px 0;
@@ -106,7 +114,9 @@ img {
     font-size: 22px;
 }
 
-/* 6. Products */
+
+/* 6. Products section */
+
 .products {
     padding: 30px 0;
 }
@@ -116,7 +126,60 @@ img {
     margin-bottom: 20px;
 }
 
-/* Flexbox inside each card: the button stays at the bottom */
+
+/* Task 1: Category Filters */
+
+/* Hide radio circles */
+
+#products input[type="radio"] {
+    display: none;
+}
+
+/* Style filter labels */
+
+#products label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #263238;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Change selected filter color */
+
+#products input:checked + label {
+    background-color: hsl(196, 70%, 45%);
+    color: white;
+}
+
+/* Lip Care filter */
+
+#filter-lip-care:checked ~ #productGrid .col:not([data-category="lip-care"]) {
+    display: none;
+}
+
+/* Skincare filter */
+
+#filter-skincare:checked ~ #productGrid .col:not([data-category="skincare"]) {
+    display: none;
+}
+
+/* Body Care filter */
+
+#filter-body-care:checked ~ #productGrid .col:not([data-category="body-care"]) {
+    display: none;
+}
+
+/* Sets filter */
+
+#filter-sets:checked ~ #productGrid .col:not([data-category="sets"]) {
+    display: none;
+}
+
+
+/* Product cards */
+
 .product-card {
     display: flex;
     flex-direction: column;
@@ -130,14 +193,11 @@ img {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 .product-card img {
     width: 100%;
     height: auto;
     display: block;
 }
-
-
 
 .product-card h3 {
     font-size: 16px;
@@ -153,7 +213,9 @@ img {
     margin-top: auto;
 }
 
+
 /* 7. Buttons */
+
 .product-card button,
 .product-button {
     width: 100%;
@@ -168,6 +230,9 @@ img {
 .product-button:hover {
     background: #5b768d;
 }
+
+
+/* 8. Product detail page */
 
 .product-page {
     padding-bottom: 40px;
@@ -209,6 +274,8 @@ img {
 }
 
 
+/* 9. Footer */
+
 .footer {
     background: #5b768d;
     color: white;
@@ -233,7 +300,6 @@ img {
 
 .footer a:hover {
     text-decoration: underline;
-
 }
 
 .footer-bottom {
@@ -243,14 +309,13 @@ img {
 }
 
 
-/* MOBILE SCREEN - around 375px */
+/* 10. Mobile screen */
+
 @media (max-width: 576px) {
 
     .brand {
         font-size: 18px;
     }
-
-    
 
     .hero {
         height: 450px;
@@ -286,10 +351,12 @@ img {
     footer {
         text-align: center;
     }
+
 }
 
 
-/* TABLET SCREEN - around 768px */
+/* 11. Tablet screen */
+
 @media (min-width: 577px) and (max-width: 991px) {
 
     .brand {
@@ -304,17 +371,18 @@ img {
         font-size: 34px;
     }
 
-
     .product-card img {
         height: 280px;
     }
 
-
     .product-detail-image {
         width: 50%;
     }
+
 }
 
+
+/* 12. Desktop screen */
 
 @media (min-width: 992px) {
 
@@ -330,11 +398,12 @@ img {
         font-size: 42px;
     }
 
- .product-card img {
+    .product-card img {
         height: 320px;
     }
 
     .product-detail-image {
         width: 45%;
     }
+
 }
