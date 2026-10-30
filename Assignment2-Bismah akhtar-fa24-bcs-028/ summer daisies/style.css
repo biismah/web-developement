@@ -1,0 +1,340 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Announcement bar */
+.announcement {
+    background: #5b768d;
+    color: #ffffff;
+    text-align: center;
+    padding: 11px 15px;
+    font-size: 13px;
+}
+
+
+
+/* 3. Header: logo in the centre, Bootstrap navbar below it */
+.logo-bar {
+    text-align: center;
+    padding: 6px 0;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar {
+    padding-top: 0px !important;
+    padding-bottom: 12px !important;
+}
+
+
+.nav-link:hover {
+    color: #b77b78;
+}
+
+/* 4. Hero: Flexbox centres the text over the background image */
+.hero {
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    padding-bottom: 190px;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.hero h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.hero-button {
+    padding:  15px 20px;
+    background: white;
+    color: #222;
+    font-size: 12px;
+}
+
+.hero-button:hover {
+    background: #f3d9d0;
+}
+
+/* 5. About section */
+.about {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.small-title {
+    color: #7c5550;
+    font-size: 12px;
+}
+
+.about h2 {
+    font-size: 22px;
+}
+
+/* 6. Products */
+.products {
+    padding: 30px 0;
+}
+
+.products h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Flexbox inside each card: the button stays at the bottom */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.product-card h3 {
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.product-card p {
+    color: #6b625e;
+    font-weight: bold;
+}
+
+.product-card button {
+    margin-top: auto;
+}
+
+/* 7. Buttons */
+.product-card button,
+.product-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #eeeae6;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.product-card button:hover,
+.product-button:hover {
+    background: #5b768d;
+}
+
+.product-page {
+    padding-bottom: 40px;
+}
+
+.breadcrumbs {
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+.breadcrumbs a,
+.back-link {
+    color: #5b768d;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.detail-image {
+    width: 100%;
+    border-radius: 9px;
+}
+
+.product-page h1 {
+    font-size: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.price {
+    color: #7c5550;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.quantity {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+
+
+.footer {
+    background: #5b768d;
+    color: white;
+    padding: 40px 0 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer p,
+.footer a {
+    font-size: 14px;
+}
+
+.footer a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+
+/* MOBILE SCREEN - around 375px */
+@media (max-width: 576px) {
+
+    .brand {
+        font-size: 18px;
+    }
+
+    
+
+    .hero {
+        height: 450px;
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .about,
+    .products {
+        padding: 20px 15px;
+    }
+
+    .product-card img {
+        height: 250px;
+    }
+
+    .product-page {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-detail-image {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+
+/* TABLET SCREEN - around 768px */
+@media (min-width: 577px) and (max-width: 991px) {
+
+    .brand {
+        font-size: 24px;
+    }
+
+    .hero {
+        height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .product-card img {
+        height: 280px;
+    }
+
+
+    .product-detail-image {
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .brand {
+        font-size: 26px;
+    }
+
+    .hero {
+        height: 700px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+ .product-card img {
+        height: 320px;
+    }
+
+    .product-detail-image {
+        width: 45%;
+    }
+}
