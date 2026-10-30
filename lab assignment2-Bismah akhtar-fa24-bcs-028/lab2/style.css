@@ -1,0 +1,160 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fffdfb;
+}
+
+/* Navbar */
+.navbar {
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Navigation links */
+.navbar-collapse {
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+/* Shopping bag */
+.cart {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    padding: 40px 15px;
+}
+
+.heading h1 {
+    font-size: 30px;
+}
+
+.heading p {
+    color: #777;
+}
+
+/* Product grid: desktop */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-bottom: 40px;
+}
+
+/* Product cards */
+.product-card {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #eee;
+    background-color: white;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.product-card p {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f1ec;
+}
+
+/* Tablet: two columns */
+@media (min-width: 768px) and (max-width: 991px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop and tablet navbar */
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        align-items: center;
+    }
+}
+
+/* Phone: one column and hamburger */
+@media (max-width: 767px) {
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .cart {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        height: auto;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+}
