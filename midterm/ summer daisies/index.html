@@ -100,11 +100,31 @@
                 <label for="filter-sets">Sets</label>
 
 
+                <!-- Task 3: Search and Sort -->
+
+                <div class="product-controls">
+
+                    <input
+                        type="text"
+                        id="productSearch"
+                        placeholder="Search products..."
+                        aria-label="Search products"
+                    >
+
+                    <button type="button" id="sortPrice">
+                        Sort by Price
+                    </button>
+
+                </div>
+
+
                 <!-- Product Grid -->
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3" id="productGrid">
 
+
                     <!-- Product 1 -->
+
                     <div class="col" data-category="lip-care">
                         <div class="product-card">
                             <a href="product.html">
@@ -116,7 +136,9 @@
                         </div>
                     </div>
 
+
                     <!-- Product 2 -->
+
                     <div class="col" data-category="lip-care">
                         <div class="product-card">
                             <a href="product.html">
@@ -128,7 +150,9 @@
                         </div>
                     </div>
 
+
                     <!-- Product 3 -->
+
                     <div class="col" data-category="sets">
                         <div class="product-card">
                             <a href="product.html">
@@ -140,7 +164,9 @@
                         </div>
                     </div>
 
+
                     <!-- Product 4 -->
+
                     <div class="col" data-category="lip-care">
                         <div class="product-card">
                             <a href="product.html">
@@ -152,7 +178,9 @@
                         </div>
                     </div>
 
+
                     <!-- Product 5 -->
+
                     <div class="col" data-category="body-care">
                         <div class="product-card">
                             <a href="product.html">
@@ -164,7 +192,9 @@
                         </div>
                     </div>
 
+
                     <!-- Product 6 -->
+
                     <div class="col" data-category="lip-care">
                         <div class="product-card">
                             <a href="product.html">
@@ -176,7 +206,9 @@
                         </div>
                     </div>
 
+
                     <!-- Product 7 -->
+
                     <div class="col" data-category="skincare">
                         <div class="product-card">
                             <a href="product.html">
@@ -188,7 +220,9 @@
                         </div>
                     </div>
 
+
                     <!-- Product 8 -->
+
                     <div class="col" data-category="sets">
                         <div class="product-card">
                             <a href="product.html">
@@ -200,13 +234,23 @@
                         </div>
                     </div>
 
+
                 </div>
+
+                <!-- Task 3: No products message -->
+
+                <p id="noProducts" style="display: none;">
+                    No products found
+                </p>
+
             </div>
         </section>
 
     </main>
 
+
     <!-- Footer -->
+
     <footer class="footer">
 
         <div class="container">
@@ -249,8 +293,14 @@
 
     </footer>
 
+
     <!-- Bootstrap JS for mobile hamburger menu -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Task 3: Separate JavaScript file -->
+
+    <script src="script.js"></script>
 
 </body>
 </html>

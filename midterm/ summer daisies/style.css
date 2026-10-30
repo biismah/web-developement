@@ -414,11 +414,13 @@ img {
 ================================= */
 
 /* Product page spacing */
+
 .product-page {
     padding: 40px 0;
 }
 
 /* Breadcrumbs */
+
 .breadcrumbs {
     margin-bottom: 30px;
     font-size: 14px;
@@ -431,6 +433,7 @@ img {
 
 
 /* Mobile layout - below 628px */
+
 .product-layout {
     display: grid;
 
@@ -442,6 +445,7 @@ img {
     grid-template-columns: 1fr;
     gap: 30px;
 }
+
 
 /* Assigning grid areas */
 
@@ -459,6 +463,7 @@ img {
 
 
 /* Product image */
+
 .detail-image img {
     width: 100%;
     height: auto;
@@ -467,6 +472,7 @@ img {
 
 
 /* Product details */
+
 .product-details {
     background-color: #f7f7f7;
     padding: 25px;
@@ -485,6 +491,7 @@ img {
 
 
 /* Quantity */
+
 .quantity {
     margin: 20px 0;
 }
@@ -497,6 +504,7 @@ img {
 
 
 /* Add to bag button */
+
 .add-to-cart {
     width: 100%;
     padding: 14px;
@@ -512,6 +520,7 @@ img {
 
 
 /* Product description */
+
 .product-description {
     line-height: 1.8;
 }
@@ -526,6 +535,7 @@ img {
 
 
 /* Desktop and tablet layout - 628px and wider */
+
 @media (min-width: 628px) {
 
     .product-layout {
@@ -540,6 +550,7 @@ img {
     }
 
     /* Sticky product details */
+
     .product-details {
         position: sticky;
         top: 98px;
@@ -548,3 +559,76 @@ img {
 
 }
 
+
+/* =================================
+   TASK 3 - SEARCH AND SORT
+================================= */
+
+/* Search and Sort controls */
+
+.product-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+#productSearch {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #263238;
+    border-radius: 5px;
+}
+
+#sortPrice {
+    padding: 10px 20px;
+    background-color: #263238;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#sortPrice:hover {
+    background-color: #5b768d;
+}
+
+
+/* Premium label */
+
+.premium-label {
+    display: inline-block;
+    background-color: hsl(196, 70%, 45%);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+}
+
+
+/* No products found message */
+
+#noProducts {
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+}
+
+
+/* Mobile screen */
+
+@media (max-width: 576px) {
+
+    .product-controls {
+        flex-direction: column;
+    }
+
+    #productSearch {
+        width: 100%;
+    }
+
+    #sortPrice {
+        width: 100%;
+    }
+
+}
